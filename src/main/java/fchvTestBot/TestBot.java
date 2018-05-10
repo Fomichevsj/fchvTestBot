@@ -18,6 +18,14 @@ import java.util.List;
 
 public class TestBot extends TelegramLongPollingBot {
 
+    private static String botName;
+    private static String token;
+    static {
+        BotInfoManager botInfoManager = new BotInfoManager();
+        botName = botInfoManager.getBotName();
+        token = botInfoManager.getToken();
+    }
+
     @Override
     public void onUpdateReceived(Update update) {
         // We check if the update has a message and the message has text
@@ -30,7 +38,7 @@ public class TestBot extends TelegramLongPollingBot {
             System.out.println("chat ID: " + chat_id);
 
             SendMessage message = null;
-            if(new String(chat_id + "").equals("poijsdf")) {
+            if(new String(chat_id + "").equals("106128975")) {
                 message = new SendMessage() // Create a message object object
                         .setChatId(chat_id)
                         .setText(message_text + "\nИриша! ^_^\nСвязаны!");
@@ -81,11 +89,11 @@ public class TestBot extends TelegramLongPollingBot {
 
     @Override
     public String getBotUsername() {
-        return "fchvTestBot";
+        return botName;
     }
 
     @Override
     public String getBotToken() {
-        return "рвзщццукртфзщышвоа";
+        return token;
     }
 }

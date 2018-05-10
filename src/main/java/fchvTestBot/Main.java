@@ -21,7 +21,7 @@ public class Main {
 
             //89976540
             SendMessage message = new SendMessage() // Create a message object object
-                    .setChatId("hpqowef")
+                    .setChatId("89976540")
                     .setText( "Связаны!");
             try {
                 myBot.execute(message);
