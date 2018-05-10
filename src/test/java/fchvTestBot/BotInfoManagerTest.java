@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class BotInfoManagerTest {
-    private static final String pathToFile = "C:\\Users\\User\\IdeaProjects\\fchvTestBot\\resources\\BotInfoTest";
+    private static final String pathToFile = "C:\\Users\\User\\IdeaProjects\\fchvTestBot\\resources\\ResourcesTest\\BotInfoTest";
     @Test
     public void testConstructor() {
         BotInfoManager botInfoManager = new BotInfoManager(pathToFile);

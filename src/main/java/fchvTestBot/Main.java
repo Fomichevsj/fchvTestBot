@@ -22,12 +22,15 @@ public class Main {
             //89976540
             SendMessage message = new SendMessage() // Create a message object object
                     .setChatId("89976540")
-                    .setText( "Связаны!");
+                    .setText( "Я стартовал!");
             try {
                 myBot.execute(message);
             } catch (TelegramApiException e) {
                 e.printStackTrace();
             }
+            ListenThread listenThread = new ListenThread(myBot);
+            listenThread.run();
+            //create thread to send message
         } catch (TelegramApiException e) {
             e.printStackTrace();
         }
