@@ -10,7 +10,8 @@ public class DBHelper {
     public DBHelper() {
         try {
             Class.forName("org.hsqldb.jdbcDriver");
-            connection = DriverManager.getConnection("jdbc:hsqldb:file:C:\\DataBase/myDataBase", "SA", "");
+            //connection = DriverManager.getConnection("jdbc:hsqldb:file:C:\\DataBase/myDataBase", "SA", "");
+            connection = DriverManager.getConnection("jdbc:hsqldb:file:C:\\SergDataBase/myDataBase", "SA", "");
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
